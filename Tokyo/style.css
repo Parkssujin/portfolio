@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #000;
+}
+.navi {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 100;
+}
+.navi li a {
+    font-size: 3em;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+}
+.navi li a:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    color: #00a040;
+    content: attr(data-text);
+    overflow: hidden;
+    transition: 0.5s;
+}
+.navi li a:hover:before {
+    width: 100%;
+}
+.photo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: url(images/main.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    transition: 0.5s;
+}

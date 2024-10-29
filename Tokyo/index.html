@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO -->
+    <title>My Tokyo Travel</title>
+    <meta name="description" content="박수진의 포트폴리오 사이트 나의 도쿄여행">
+    <meta name="autor" content="수진">
+    <link rel="shortcut icon" href="images/tokyo_favicon.ico" type="image/x-icon">
+        <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- CSS -->
+     <link rel="stylesheet" href="style.css">
+     <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <div class="container">
+      <ul class="navi">
+        <li data-image="images/ueno.jpg"><a href="#" data-text="UENO">UENO</a></li>
+        <li data-image="images/akihabara.jpg"><a href="#" data-text="AKIHABARA">AKIHABARA</a></li>
+        <li data-image="images/marunouchi.jpg"><a href="#" data-text="MARUNOUCHI">MARUNOUCHI</a></li>
+        <li data-image="images/hibiya.jpg"><a href="#" data-text="HIBIYA">HIBIYA</a></li>
+        <li data-image="images/enoshima.jpg"><a href="#" data-text="ENOSHIMA">ENOSHIMA</a></li>
+        <li data-image="images/tokyotower.jpg"><a href="#" data-text="TOKYOTOWER">TOKYOTOWER</a></li>
+        <li data-image="images/tokyoeki.jpg"><a href="#" data-text="TOKYOEKI">TOKYOEKI</a></li>
+      </ul>
+      <div class="photo"></div>
+    </div>
+
+
+
+    <script>
+      $('.navi li').mouseenter(function(){
+        var changeImage = $(this).attr('data-image')
+        $('.photo').css(
+          'background-image', 'url('+ changeImage +')'
+        );
+      });
+      $('.navi li').mouseleave(function(){
+        $('.photo').css(
+          'background-image', ''
+        );
+      });
+    </script>
+</body>
+</html>
