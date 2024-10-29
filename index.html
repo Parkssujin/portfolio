@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- SEO -->
+    <title>Sujin&#39;s Portfolio</title>
+    <meta name="description" content="박수진의 포트폴리오 사이트" />
+    <meta name="author" content="수진" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- OG (Open Graph Data) -->
+    <meta property="og:title" content="박수진의 포트폴리오" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://parkssujin.github.io/portfolio/" />
+    <meta property="og:image" content="https://parkssujin.github.io/portfolio/images/og.webp" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <!-- Font Awsome -->
+    <script src="https://kit.fontawesome.com/d614fa714f.js" crossorigin="anonymous"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Javascript -->
+    <script type="module" src="src/main.js" defer></script>
+    <script type="module" src="src/projects.js" defer></script>
+    <script type="module" src="src/active_menu.js" defer></script>
+    <!-- 규모가 커질경우, 전역변수를 사용하면 버그가 일어날 가능성이 커지기때문에, 모듈화 시켜둠 -->
+
+
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__logo">
+            <img class="header__logo__img" src="images/favicon.ico" alt="logo" />
+            <h1 class="header__logo__title"><a href="#">박수진의 포트폴리오</a></h1>
+        </div>
+        <nav class="header__nav">
+            <ul class="header__menu">
+                <li><a class="header__menu__item acctive" href="#home">Home</a></li>
+                <li><a class="header__menu__item" href="#about">About</a></li>
+                <li><a class="header__menu__item" href="#skills">Skills</a></li>
+                <li><a class="header__menu__item" href="#work">My work</a></li>
+                <li><a class="header__menu__item" href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="header__toggle" aria-label="navigation menu toggle">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+    </header>
+    <!-- Main -->
+    <main>
+        <!-- Home -->
+        <section id="home">
+            <div class="home__container">
+                <img class="home__avatar" src="images/Profile-removebg.png" alt="프로필 이미지">
+                <h2 class="home__title">안녕하세요 <br /><strong class="home__title--strong">맞춤형 웹퍼블리셔</strong> 박수진입니다.</h2>
+                <p class="home__description">잡코리아에 등록된 기업의 요구에 맞춰 간단한 채용공고 퍼블리싱에 관한 업무를 하며, 기업맞춤형 웹퍼블리셔로 성장한 박수진입니다.</p>
+                <a class="home__contact" href="#contact">Contact Me</a>
+            </div>
+        </section>
+        <!-- About -->
+        <section id="about" class="section max-container">
+            <h2 class="title">About me</h2>
+            <p class="description">다양한 프로젝트를 수행하며 HTML, CSS등을 활용하여 웹사이트 및 모바일 프로모션을 구축하고, 유지보수까지 책임짐으로써 사용자가 보다 편하게 웹사이트를 이용할 수 있도록 기여하였습니다.
+            </p>
+            <ul class="majors">
+                <li class="major">
+                    <i class="fa-brands fa-html5 major__icon"></i>
+                    <p class="major__title">HTML</p>
+                    <p>기업에 요구에 맞춰 HTML을 사용하여 채용페이지를 작업하였습니다.</p>
+                </li>
+                <li class="major">
+                    <i class="fa-brands fa-css3-alt major__icon"></i>
+                    <p class="major__title">CSS</p>
+                    <p>기업에 요구에 맞춰 CSS를 사용하여 채용페이지를 작업하였습니다.</p>
+                </li>
+                <li class="major">
+                    <i class="fa-brands fa-js major__icon"></i>
+                    <p class="major__title">Javascript</p>
+                    <p>근무 중 자바스크립트, 제이쿼리, 반응형웹디자인 수업을 병행하였습니다.</p>
+                </li>
+            </ul>
+            <ul class="jobs">
+                <li class="job"><img class="job__img" src="images/jobs/metam.png" alt="metam logo">
+                    <div>
+                        <p class="job__name">meta m &#40;구 메타넷 플랫폼&#41; 잡코리아 파트 퍼블리셔 활동</p>
+                        <p class="job__period">2021 Aug - 2021 Dec</p>
+                    </div>
+                </li>
+                <li class="job"><img class="job__img" src="images/jobs/ubase.png" alt="ubase logo">
+                    <div>
+                        <p class="job__name">ubase 잡코리아 파트 퍼블리셔 활동</p>
+                        <p class="job__period">2022 Jan - 2023 Oct</p>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <!-- Skills -->
+        <section id="skills" class="section">
+            <div class="max-container">
+                <h2 class="title">My Skills</h2>
+                <p class="description">Skills</p>
+                <p>HTML, CSS를 사용하여 근무한 경험이 있으며, Javascript와 jQuery를 사용하여 개인 작업물을 작업하였습니다.
+                </p>
+                <div class="skills__container">
+                    <section class="skills__coding">
+                        <h3 class="skills__title">Coding Skills</h3>
+                        <ul>
+                            <li class="bar">
+                                <div class="bar__metadata"><span>HTML</span><span>98%</span></div>
+                                <div class="bar__bg">
+                                    <div class="bar__value" style="width: 98%;"></div>
+                                </div>
+                            </li>
+                            <li class="bar">
+                                <div class="bar__metadata"><span>CSS</span><span>85%</span></div>
+                                <div class="bar__bg">
+                                    <div class="bar__value" style="width: 85%;"></div>
+                                </div>
+                            </li> 
+                            <li class="bar">
+                                <div class="bar__metadata"><span>jQuery</span><span>40%</span></div>
+                                <div class="bar__bg">
+                                    <div class="bar__value" style="width: 40%;"></div>
+                                </div>
+                            </li>
+                            <li class="bar">
+                                <div class="bar__metadata"><span>JavaScript</span><span>40%</span></div>
+                                <div class="bar__bg">
+                                    <div class="bar__value" style="width: 40%;"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </section>
+                    <section class="skills__tools">
+                        <h3 class="skills__title">Tools</h3>
+                        <ul>
+                            <li>Visual Studio Code</li>
+                            <li>editor</li>
+                        </ul>
+                    </section>
+                    <section class="skills__etc">
+                        <h3 class="skills__title">Etc</h3>
+                        <ul>
+                            <li>Git</li>
+                            <li>Japanese</li>
+                            <li>Photoshop</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </section>
+        <!-- Work -->
+        <section id="work" class="section">
+            <div class="max-container">
+                <h2 class="title">My work</h2>
+                <p class="description">Projects</p>
+                <ul class="categories">
+                    <li>
+                        <button class="category category--selected" data-category="all">
+                            All <span class="category__count">5</span>
+                        </button>
+                    </li>
+                    <!-- 버튼을 누를시 'data-' 설정을 통해 사용자가 보는 UI와 상관없이 태그상에 지정한 속성인 catagory를 이용해서 어떤 버튼이 클릭되었는지 판별가능 -->
+                    <li>
+                        <button class="category" data-category="Response">
+                            Response <span class="category__count">2</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="category" data-category="PC">
+                            PC <span class="category__count">2</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="category" data-category="mobile">
+                            Mobile <span class="category__count">1</span>
+                        </button>
+                    </li>
+                </ul>
+                <ul class="projects">
+                    <li class="project" data-type="Response">
+                        <!-- 버튼이 클릭이 되면 버튼에 들어있는 카테고리에 맞는 데이터타입이 맞는 아이템만 보여주기 위해
+                        data-type 입력 -->
+                        <a href="Aniluv/index.html" target="_blank">
+                            <img
+                             src="images/projects/project_aniluv.webp" 
+                             alt="project2" 
+                             class="project__img"
+                             />
+                            <div class="project__metadata">
+                            <h3 class="project__title">Aniluv</h3>
+                            <p>반응형 메인페이지, 이벤트클릭 모달</p>
+                            <p>HTML, CSS, JavaScript</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="project" data-type="Response">
+                        <a href="Torriden/index.html" target="_blank">
+                            <img
+                             src="images/projects/project_torriden.webp" 
+                             alt="project2" 
+                             class="project__img"
+                             />
+                            <div class="project__metadata">
+                            <h3 class="project__title">Torriden</h3>
+                            <p>반응형 메인페이지</p>
+                            <p>HTML, CSS, jQuery</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="project" data-type="PC">
+                        <a href="Diessert/index.html" target="_blank">
+                            <img
+                             src="images/projects/project_diessert.webp" 
+                             alt="project3" 
+                             class="project__img"
+                             />
+                            <div class="project__metadata">
+                            <h3 class="project__title">Diessert</h3>
+                            <p>PC 메인페이지, 로그인페이지</p>
+                            <p>HTML, CSS, jQuery</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="project" data-type="mobile">
+                        <a href="Youtube/index.html" target="_blank">
+                            <img
+                             src="images/projects/project_mobile.webp" 
+                             alt="project4" 
+                             class="project__img"
+                             />
+                            <div class="project__metadata">
+                            <h3 class="project__title">Youtube</h3>
+                            <p>모바일 메인페이지, 간단한 클릭이벤트</p>
+                            <p>HTML, CSS, JavaScript</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="project" data-type="PC">
+                        <a href="Tokyo/index.html" target="_blank">
+                            <img
+                             src="images/projects/project_tokyo.webp" 
+                             alt="project5" 
+                             class="project__img"
+                             />
+                            <div class="project__metadata">
+                            <h3 class="project__title">My Tokyo Travel</h3>
+                            <p>PC 도쿄여행 배경이미지 모음</p>
+                            <p>HTML, CSS, jQuery</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        <!-- Arrow up -->
+        <aside>
+            <a class="arrow-up" href="#home" title="back to top">
+                <i class="fa-solid fa-arrow-up"></i>
+            </a>
+        </aside>
+    </main>
+    <!-- Footer -->
+    <footer id="contact" class="section">
+        <div class="max-container">
+            <h2 class="title">Let&#39;s talk</h2>
+            <a href="mailto:tnwls452@gmail.com">
+            <p class="description contact__link">tnwls452@gmail.com</p></a>
+            <p>©Park Sujin - All right</p>
+        </div>
+    </footer>
+</body> 
+</html>
