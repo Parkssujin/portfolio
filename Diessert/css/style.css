@@ -1,0 +1,153 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+
+/*
+    font-family: 'Nanum Gothic', sans-serif;
+*/
+
+/*
+   coral: #FF724C
+
+ orange: #FFA133, 
+ green01: #6BC760,  
+ green02: #40A458
+*/
+
+/*
+    버튼 btn
+    상자 box
+    너비 w
+    높이 h
+    글자색 c
+    배경색 bg
+    당기기 pull (float:left)
+    밀기 push (float:right)
+    패딩 p
+    마진 m
+    
+*/
+
+/*Initialize*/
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {font-size: 12px;font-family: 'Nanum Gothic', sans-serif;color: #333;}
+#wrap {width: 1200px;margin: 0 auto;}
+a:link, a:visited {color: inherit; text-decoration: none;}
+
+
+/* Grid System */
+.row {overflow: hidden;margin-top: 40px;}
+.row [class*=span] {float: left;margin-right: 2%;}
+.row [class*=span]:last-child {margin-right: 0;}
+/*  *는 포함하는 이란 뜻 따라서 class에 span이 포함되어있는 값  */
+.span_1 {width: 6.5%;}
+.span_2 {width:15%;}
+.span_3 {width:23.5%;}
+.span_4 {width:32%;}
+.span_5 {width:40.5%;}
+.span_6 {width: 49%}
+
+.span_7 {width:49%;}
+.span_8 {width:57.5%;}
+.span_9 {width:66%;}
+.span_10 {width:74.5%;}
+.span_11 {width:83%;}
+.span_12 {width: 100%;}
+
+/*2%의 공백 11개의 공백이기 때문에 22%를 뺀 78을 12롤 나눈 6.5 에서 8.5를 점차 더해감*/
+
+
+/*paddig*/
+.p5 {padding: 5px;}
+.p8 {padding: 8px;}
+.p10 {padding: 10px;}
+.p20 {padding: 20px;}
+.p30 {padding: 30px;}
+
+/*margin*/
+.m5 {margin: 5px;}
+.m8 {margin: 8px;}
+.m10 {margin: 10px;}
+
+
+/* width */
+.w80 {width: 80px;}
+.w100 {width: 100px;}
+.w120 {width: 120px;}
+.w150 {width: 150px;}
+.w180 {width: 180px;}
+.w200 {width: 200px;}
+
+.w10 {width: 10%;}
+
+/*align*/
+.center {text-align: center;}
+.right {text-align: right;}
+.left {text-align: left;}
+
+/*float*/
+.pull {float: left;}
+.push {float: right;}
+
+
+
+/*타이포 그래피*/
+
+h1 {font-size: 36px;font-weight: 500; padding: 8px;}
+h2 {font-size: 24px;font-weight: bold; padding: 8px;}
+h3 {font-size: 18px;font-weight: 500; padding: 8px;}
+h4 {font-size: 14px;padding: 8px;}
+h5 {font-size: 12px;padding: 8px;color: #ccc;}
+p{font-size: 12px;padding: 8px;}
+
+
+
+.h_und {border-bottom: 1px solid #333;margin: 16px;}
+.und_l {border-bottom: 3px solid #ff88e0;width: 200px; margin-bottom: 30px;}
+
+
+/*Color Set*/
+.bg_coral {background-color: #FF724C;}
+.bg_orange {background-color: #FFA133;}
+.bg_green01 {background-color: #6BC760;}
+.bg_green02 {background-color: #40A458;}
+.bg_gray {background-color: #999;}
+.bg_white {background-color: #fff;}
+
+
+.bg_pink {background-color: #ff88e0;}
+
+
+
+.c_coral {color: #FF724C;}
+.c_orange {color: #FFA133;}
+.c_green01 {color: #6BC760;}
+.c_green02 {color: #40A458;}
+.c_gray {color: #999;}
+.c_white {color: #fff;}
+
+.c_pink {color: #ff88e0;}
+
+
+/* box */
+.box30x30 {width: 30px; height: 30px;}
+.box50x50 {width: 50px; height: 50px;}
+.box240x50 {width: 240px; height: 50px;border: 3px solid #40A458;}
+
+/* button style */
+.btn {border: none;padding: 8px 0;transition-duration: .4s; text-align: center;margin: 8px;font-size: 16px;border-radius: 16px;margin: 8px;cursor: pointer;color: #fff;outline: none;}
+.btn_border {border: 1px solid #fff;padding: 8px 0;font-size: 16px; transition-duration: .4s; text-align: center;border-radius: 16px;margin: 8px;outline: none;}
+.btn:hover {background-color: #fff; color: #000;}
+.btn_border:hover {background-color: #fff;border-color: #ccc;}
+
+.btn_s {border: none; padding: 4px 0 7px;;transition-duration: .4s; text-align: center;margin: 8px;font-size: 14px;border-radius: 14px;margin: 8px;cursor: pointer;color: #fff;outline: none;}
+.btn_s:hover {background-color: #fff; color: #ff88e0;transform: scale(1.08);}
+
+
+
+.more {border: 1px solid #fff; border-radius: 8px;width: 16px; height: 16px;padding: 1px; background-color: #fff;display: inline-block;color: #333;font-size: 14px; margin-left: 10px;}
+
+/*span 은 a 처럼 크기를 가질 수 없다 따라서 display:inline-block을 줌 block속성을 가지면 크기를 가질 수 있고, inline으로한 줄에 서게 함 inline은 글자의 공백도 인식하기 때문에 공백 주의*/
+[class*=btn]:hover .more {background-color: #333; color: #fff;}
+
+
+

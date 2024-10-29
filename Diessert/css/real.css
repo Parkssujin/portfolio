@@ -1,0 +1,251 @@
+@charset "utf-8";
+
+* {scroll-behavior: smooth;}
+
+header {position: relative;height: 158px;}
+/*헤더 탑*/
+#h_top {background-color: rgba(255,136,224,0.4);position: relative;height: 100px;width: 100%;}
+#logo {display: block;width: 200px; height: 80px;margin: 0 auto; padding:10px 0;}
+#q_top {position: absolute;right: 2%;top: 8%;color: #fff;font-size: 14px;}
+#q_top>a{transition-duration: .4s;}
+#q_top>a:hover{color: #000;}
+#q_top>a>i {margin-right: 5px;transition-duration: .4s;}
+#q_top>a>i:hover{transform: scale(1.4);color: #000;}
+#q_top>span {color: #f00;font-size: 10px;}
+
+
+/*메뉴*/
+#menu {overflow: hidden;padding: 10px 0;position: absolute;width: 100%;z-index: 8;}
+#gnb{width: 1200px;margin: 0 auto;}
+#gnb>li>.bar {font-size: 35px;}
+#gnb>li {list-style: none;text-align: center;float: left;padding: 0 13px;position: relative;}
+#gnb>li>a {display: block; font-size: 16px;width: 200px;font-weight: bold;padding: 9px 0 10px;transition-duration: .4s;}
+#gnb>li:hover>a {background-color: rgba(255,136,224);color: #fff;}
+
+.submenu {list-style: none;display: none;}
+.submenu>li>a {display: block;font-size: 14px;padding: 6px 0 10px;transition-duration: .4s;color: #fff;text-shadow: 0px 0px 5px #666;font-weight: bold;}
+.submenu>li>a:hover {background-color: rgba(255,136,224,0.5);color: #fff;}
+
+.bar {transition-duration: .4s;}
+.bar:hover {background-color:rgba(255,136,224);color: #fff; }
+
+#mBack {position: absolute;z-index: 7;width: 100%;height: 128px;top: 148px; background-color: rgba(0,0,0,0.5);display: none;}
+
+/*슬라이드*/
+
+#slide {height: 40vh;position: relative;overflow: hidden;width: 100vw;}
+#slide>.scene {background-position: center; background-size: cover;position: absolute;width: 100vw;height: 40vh; display: none;}
+#slide>.scene:first-child {display: block;}
+
+#slide>.scene>h2 {background-color: rgba(255,255,255,0.6); color: #000;text-align: center; }
+
+
+section {position: relative;}
+
+/*섹션 우측 바로가기*/
+#quick{position: fixed; z-index: 6;right: 2%; bottom: 10%;width: 90px;padding: 3px;text-align: center;}
+#quick>a {display: block;margin-bottom: 10px;border: 1px solid #999;transition-duration: .4s;}
+#quick>a>img {width: 40px;margin-top: 2px;}
+#quick>a>p {font: 5px;}
+
+
+#quick>a:hover {background-color: #fce2cb;color: #fff;}
+
+
+
+
+/*섹션 상품 나열 기본*/
+.sell {height: 450px; margin: 100px 0 180px ;}
+
+
+#goods, #goods2, #goods3, #goods4 {position: relative;height: 400px;overflow: hidden;} 
+#goods>a, #goods2>a, #goods3>a, #goods4>a {position: absolute;width: 230px;text-align: center;height: 100%;}
+#goods>a>img, #goods2>a>img, #goods3>a>img, #goods4>a>img {width: 100%;height: 299px; transition-duration: .4s;}
+
+#goods>a:hover>img, #goods2>a:hover>img, #goods3>a:hover>img, #goods4>a:hover>img {transform: scale(1.04);}
+
+
+
+
+/*센션 특가*/
+#goods [class*=arrow] {position: absolute; font-size: 24px; border: 1px solid #fff; color: #fff; background-color: rgba(255,136,224,0.5);border-radius: 50%;padding: 10px;top: 128px;display: block;display: none;}
+/*#goods [class*=arrow]:hover {}*/
+.arrowR { right: 0;}
+
+
+/*섹션 베스트존*/
+#goods2>.prev, #goods2>.next {position: absolute; font-size: 24px; border: 1px solid #fff; color: #fff; background-color: rgba(255,136,224,0.5);border-radius: 50%;padding: 10px;top: 128px;display: block;display: none;}
+/*#goods [class*=arrow]:hover {}*/
+.next { right: 0;}
+
+
+/*섹션 새로운디저트존*/
+
+#goods3 [class*=arrow] {position: absolute; font-size: 24px; border: 1px solid #fff; color: #fff; background-color: rgba(255,136,224,0.5);border-radius: 50%;padding: 10px;top: 128px;display: block;display: none;}
+/*#goods [class*=arrow]:hover {}*/
+.arrowR3 { right: 0;}
+
+
+
+/*섹션 무료배송 존*/
+
+#goods4 [class*=arrow] {position: absolute; font-size: 24px; border: 1px solid #fff; color: #fff; background-color: rgba(255,136,224,0.5);border-radius: 50%;padding: 10px;top: 128px;display: block;display: none;}
+/*#goods [class*=arrow]:hover {}*/
+.arrowR4 { right: 0;}
+
+
+/*섹션 운동제품 존*/
+#goods5 {position: relative; height: 400px;overflow: hidden;}
+#goods5>a {width: 230px;text-align: center;height: 100%;float: left;margin-right: 10px;}
+#goods5>a>img {width: 100%;height: 299px; transition-duration: .4s;}
+#goods5>a:hover>img {transform: scale(1.04);}
+
+
+/*섹션 혜택 웰컴존*/
+#benefit {height: 200px;position: relative;overflow: hidden;}
+#benefit>#welcome {position: absolute;height: 100%;width: 100%;background-size: cover;}
+#benefit>#welcome>.btn_s {position: absolute;top: 50%;left: 50%;z-index: 3;}
+
+
+
+/*섹션 신메뉴 예약*/
+#coming {height: 300px;position: relative;}
+#coming>div {height: 100%;}
+#coming>div>.btn_s {position: absolute;bottom: 0.5%;left: 35%;}
+
+
+
+
+/*푸터존*/
+#f_top {width: 1200px; margin: 0 auto; height: 200px;}
+.f_line { border: solide 3px #000;}
+#f_top>div {float: left;padding: 15px 15px 15px 60px; margin-top: 20px;}
+#number {width: 40%;line-height: 18px;margin-left: }
+#flogo {display: block; width: 180px; }
+#info{width: 30%;}
+#info>a:hover {text-decoration: underline;}
+#contact {width: 30%;}
+#sns>a {display: block; padding-left:10px;float: left;}
+#sns>a:hover {transform: scale(1.08);}
+
+
+
+#copy {width: 100%; background-color: #ccc; height: 60px;}
+#copy>div {text-align: center;padding: 15px;}
+
+
+
+
+
+
+
+/*로그인 페이지*/
+
+
+
+#wrap_l {
+  width: 100%;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(252, 226, 203, 0.4);
+}
+
+#login {
+  width: 30%;
+  height: 500px;
+  background: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+}
+#login_sns {
+    
+  padding: 20px;
+  display: flex;
+    
+}
+
+
+
+#login_sns li {
+  padding: 0px 15px;
+    list-style: none;float: left;
+}
+
+#login_sns a {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 50px;
+  background: white;
+  font-size: 20px;
+  box-shadow: 3px 3px 3px rgba(255,136,224,0.5), -3px -3px 5px rgba(255,136,224,0.1);
+}
+
+
+#login_id {
+  margin-top: 20px;
+  width: 80%;
+}
+
+#login_id input {
+  width: 100%;
+  height: 50px;
+  border-radius: 30px;
+  margin-top: 10px;
+  padding: 0px 20px;
+  border: 1px solid #ff88e0;
+  outline: none;
+}
+
+#login_pw {
+  margin-top: 20px;
+  width: 80%;
+}
+
+#login_pw input {
+  width: 100%;
+  height: 50px;
+  border-radius: 30px;
+  margin-top: 10px;
+  padding: 0px 20px;
+  border: 1px solid #ff88e0;
+  outline: none;
+}
+
+#login_etc {
+  padding: 10px;
+  width: 80%;
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+}
+
+#submit {
+  margin-top: 50px;
+  width: 80%;
+}
+#submit input {
+  width: 100%;
+  height: 50px;
+  border: 0;
+  outline: none;
+  border-radius: 40px;
+  background: linear-gradient(to left, rgba(255,136,224,0.7), rgb(255,136,224));
+  color: white;
+  font-size: 1.2em;
+  letter-spacing: 2px;
+   
+}
+
