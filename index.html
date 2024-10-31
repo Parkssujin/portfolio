@@ -22,12 +22,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <!-- Font Awsome -->
     <script src="https://kit.fontawesome.com/d614fa714f.js" crossorigin="anonymous"></script>
+    <!-- Typeit -->
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Javascript -->
     <script type="module" src="src/main.js" defer></script>
     <script type="module" src="src/projects.js" defer></script>
     <script type="module" src="src/active_menu.js" defer></script>
+    <script type="module" src="src/type.js" defer></script>
     <!-- 규모가 커질경우, 전역변수를 사용하면 버그가 일어날 가능성이 커지기때문에, 모듈화 시켜둠 -->
 
 
@@ -58,7 +61,7 @@
         <section id="home">
             <div class="home__container">
                 <img class="home__avatar" src="images/Profile-removebg.png" alt="프로필 이미지">
-                <h2 class="home__title">안녕하세요 <br /><strong class="home__title--strong">맞춤형 웹퍼블리셔</strong> 박수진입니다.</h2>
+                <h2 class="home__title" aria-label="안녕하세요 박수진입니다.">안녕하세요 <br /><strong class="home__title--strong">웹퍼블리셔</strong> 박수진입니다.</h2>
                 <p class="home__description">잡코리아에 등록된 기업의 요구에 맞춰 간단한 채용공고 퍼블리싱에 관한 업무를 하며, 기업맞춤형 웹퍼블리셔로 성장한 박수진입니다.</p>
                 <a class="home__contact" href="#contact">Contact Me</a>
             </div>
@@ -195,7 +198,7 @@
                              />
                             <div class="project__metadata">
                             <h3 class="project__title">Aniluv</h3>
-                            <p>기여도 : 100&#37;</p>
+                            <p>기여도 &#58; 100&#37;</p>
                             <p>반응형 메인페이지, 이벤트클릭 모달</p>
                             <p>HTML, CSS, JavaScript</p>
                             </div>
@@ -210,7 +213,7 @@
                              />
                             <div class="project__metadata">
                             <h3 class="project__title">Torriden</h3>
-                            <p>기여도 : 100&#37;</p>
+                            <p>기여도 &#58; 100&#37;</p>
                             <p>반응형 메인페이지</p>
                             <p>HTML, CSS, jQuery</p>
                             </div>
@@ -225,7 +228,7 @@
                              />
                             <div class="project__metadata">
                             <h3 class="project__title">Diessert</h3>
-                            <p>기여도 : 100&#37;</p>
+                            <p>기여도 &#58; 100&#37;</p>
                             <p>PC 메인페이지, 로그인페이지</p>
                             <p>HTML, CSS, jQuery</p>
                             </div>
@@ -240,7 +243,7 @@
                              />
                             <div class="project__metadata">
                             <h3 class="project__title">Youtube</h3>
-                            <p>기여도 : 100&#37;</p>
+                            <p>기여도 &#58; 100&#37;</p>
                             <p>모바일 메인페이지, 간단한 클릭이벤트</p>
                             <p>HTML, CSS, JavaScript</p>
                             </div>
@@ -255,7 +258,7 @@
                              />
                             <div class="project__metadata">
                             <h3 class="project__title">My Tokyo Travel</h3>
-                            <p>기여도 : 100&#37;</p>
+                            <p>기여도 &#58; 100&#37;</p>
                             <p>PC 도쿄여행 이미지 모음</p>
                             <p>HTML, CSS, jQuery</p>
                             </div>
