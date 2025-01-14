@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- SEO -->
+      <title>My Tokyo Travel</title>
+      <meta name="description" content="박수진의 포트폴리오 사이트 나의 도쿄여행">
+      <meta name="autor" content="수진">
+      <link rel="shortcut icon" href="images/tokyo_favicon.png" type="image/x-icon">
+        <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- CSS -->
+     <link rel="stylesheet" href="style.css">
+     <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="video_frame">
+            <video src="images/ueno_v.mp4" autoplay muted loop poster="images/ueno.jpg"></video>
+        </div>
+        <div class="heading">
+            <h1>Ueno</h1>
+            <p>
+                Ueno, Tokyo, is a vibrant cultural hub known for its iconic Ueno Park, home to museums, a zoo, and cherry blossoms in spring. This historic district seamlessly blends traditional charm with modern attractions, offering a unique experience for visitors.
+            </p>
+            <a class="btn" href="/Tokyo/index.html">Home</a>
+        </div>
+        <div class="Travel">
+            <em>Travel Memories from</em><span>2023</span>
+        </div>
+        <div class="trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="modal_gnb">
+            <div class="gnb">
+                <a href="https://parkssujin.github.io/portfolio/Tokyo/Ueno/index.html">Ueno</a>
+                <a href="#none">Akihabara</a>
+                <a href="#none">Marunouchi</a>
+                <a href="#none">Hibiya</a>
+                <a href="#none">Enoshima</a>
+                <a href="#none">Tokyotower</a>
+                <a href="#none">Tokyoeki</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('.trigger').click(function(){
+            $(this).toggleClass('active')
+            $('.modal_gnb').fadeToggle()
+        })
+    </script>
+</body>
+</html>
