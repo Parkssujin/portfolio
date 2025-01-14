@@ -9,7 +9,6 @@ a {
 }
 
 /* BG video */
-.video_frame {}
 .video_frame video {
     position: fixed;
     min-width: 100%;
