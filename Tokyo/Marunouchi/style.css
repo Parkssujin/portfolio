@@ -1,0 +1,163 @@
+body {
+    margin: 0;
+    color: #fff;
+    font-family: 'Open+Sans', sans-serif;
+    font-weight: 300;
+}
+a {
+    text-decoration: none;
+}
+
+/* BG video */
+.video_frame video {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+}
+
+/* Heading */
+.heading {
+   position: absolute; 
+   width: 700px;
+   left: 100px;
+   bottom: 100px;
+   animation: showing1 2s 1s linear;
+   animation-fill-mode: both;
+}
+.heading h1 {
+    font-size: 60px;
+    margin: 0;
+    color: navy;
+}
+.heading p {
+    font-size: 1.2em;
+    line-height: 1.5em;
+}
+.btn {
+    background-color: #fff;
+    color: #000;
+    text-transform: uppercase;
+    border: 2px solid #fff;
+    padding: 5px 15px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+.btn:hover {
+    background-color: #000;
+    color: #fff;
+    border-color: transparent;
+}
+
+/* Travel */
+.Travel {
+    position: absolute;
+    right: 100px;
+    bottom: 50px;
+    color: #000;
+    animation: showing2 2s 1s linear;
+    animation-fill-mode: both;
+}
+.Travel em {
+    display: block;
+    font-style: normal;
+    font-size: 26px;
+    margin-bottom: -20px;
+}
+.Travel span {
+    font-family: 'Monoton', sans-serif;
+    font-size: 100px;
+}
+
+/* Trigger */
+.trigger {
+    width: 40px;
+    height: 20px;
+    position: absolute;
+    right: 50px;
+    top: 50px; 
+    cursor: pointer;
+    z-index: 100;
+}
+.trigger span {
+    position: absolute;
+    /* inline 요소이건  block요소이건 position-ab 이 들어가면 inlineblock 으로 바뀜 (크기값을 가질 수 있게됨) */
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    transition: 0.3s;
+}
+.trigger span:nth-child(1) {
+    top: 0;
+}
+.trigger span:nth-child(2) {
+    top: 50%;
+    width: 80%;
+}
+.trigger span:nth-child(3) {
+    top: 100%;
+}
+
+
+.trigger.active span:nth-child(1) {
+    top: 50%;
+    transform: rotate(45deg);
+}
+.trigger.active span:nth-child(2) {
+    opacity: 0;
+}
+.trigger.active span:nth-child(3) {
+    top: 50%;
+    transform: rotate(-45deg);
+}
+
+/* Modal GNB */
+.modal_gnb {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: none;
+}
+.gnb {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.gnb a {
+    color: #fff;
+    font-size: 50px;
+    display: block;
+    padding: 10px;
+    font-family: 'Raleway', sans-serif;
+    transition: 0.3s;
+}
+
+.gnb a:hover {
+    color: #00a040;
+}
+
+@keyframes showing1 {
+    0% {
+        opacity: 0;
+        margin-left: -100px;
+    }
+    100% {
+        opacity: 1;
+        margin-left: 0;
+    }
+}
+
+@keyframes showing2 {
+    0% {
+        opacity: 0;
+        margin-right: -100px;
+    }
+    100% {
+        opacity: 1;
+        margin-right: 0;
+    }
+}
