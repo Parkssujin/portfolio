@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- SEO -->
+      <title>My Tokyo Travel</title>
+      <meta name="description" content="박수진의 포트폴리오 사이트 나의 도쿄여행">
+      <meta name="autor" content="수진">
+      <link rel="shortcut icon" href="images/tokyo_favicon.png" type="image/x-icon">
+        <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- CSS -->
+     <link rel="stylesheet" href="style.css">
+     <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="video_frame">
+            <video src="images/tokyotower_v.mp4" autoplay muted loop poster="images/tokyotower.jpg"></video>
+        </div>
+        <div class="heading">
+            <h1>Tokyo Tower</h1>
+            <p>
+                Tokyo Tower is an iconic landmark in the heart of Tokyo, known for its striking red and white design and panoramic views of the city. Inspired by the Eiffel Tower, it serves as both a communication tower and a popular tourist attraction, offering stunning vistas, especially at night.
+            </p>
+            <a class="btn" href="https://parkssujin.github.io/portfolio/Tokyo/index.html">Home</a>
+        </div>
+        <div class="Travel">
+            <em>Travel Memories from</em><span>2023</span>
+        </div>
+        <div class="trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="modal_gnb">
+            <div class="gnb">
+                <a href="https://parkssujin.github.io/portfolio/Tokyo/Ueno/index.html">Ueno</a>
+                <a href="https://parkssujin.github.io/portfolio/Tokyo/Akihabara/index.html">Akihabara</a>
+                <a href="https://parkssujin.github.io/portfolio/Tokyo/Marunouchi/index.html">Marunouchi</a>
+                <a href="https://parkssujin.github.io/portfolio/Tokyo/Hibiya/index.html">Hibiya</a>
+                <a href="https://parkssujin.github.io/portfolio/Tokyo/Enoshima/index.html">Enoshima</a>
+                <a href="https://parkssujin.github.io/portfolio/Tokyo/Tokyotower/index.html">Tokyotower</a>
+                <a href="https://parkssujin.github.io/portfolio/Tokyo/Tokyoeki/index.html">Tokyoeki</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('.trigger').click(function(){
+            $(this).toggleClass('active')
+            $('.modal_gnb').fadeToggle()
+        })
+    </script>
+</body>
+</html>
