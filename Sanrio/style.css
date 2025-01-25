@@ -1,0 +1,110 @@
+:root {
+    /* color */
+    --color-black: #636362;
+    --color-white: #ffffff;
+    --color-blue: #5DD1F8;
+    --color-yellow: #FFF8C7;
+    --color-pink: #FFBEE3;
+    --color-purple:#D7B3E5;
+  
+    /* size */
+    --base-space: 8px;
+    --size-button: 60px;
+    --size-border: 4px;
+    --size-thumbnail: 100px;
+    --font-size: 20px;
+  
+  /* annimation */
+  --annimation-durarion: 300ms;
+  }
+  
+  
+  body {
+    height: 100vh;
+    background-color: var(--color-purple);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .logo {
+    cursor: pointer;
+    transition: transform var(--annimation-durarion) ease;
+    padding: calc(var(--base-space)*2);
+  }
+  
+  .btn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: transform var(--annimation-durarion) ease;
+    margin-right: var(--base-space);
+  }
+  
+  
+  .logo:hover,
+  .btn:hover {
+    transform: scale(1.1);
+  }
+  
+  .buttons{
+    display: flex;
+    align-items: center;
+  }
+  
+  .typeBtn {
+    font-size: var(--button-font-size); 
+    padding: calc(var(--base-space)*2);
+    border-radius: var(--size-border);
+    background-color: var(--color-black);
+    color: var(--color-white);
+  }
+  
+  .colorBtn {
+    font-size: var(--button-font-size); 
+    padding: calc(var(--base-space)*2);
+    border-radius: var(--size-border);
+  }
+  
+  .blue {
+    background-color: var(--color-blue);
+  }
+  
+  .yellow {
+    background-color: var(--color-yellow);
+  }
+  
+  .pink {
+    background-color: var(--color-pink);
+  }
+  
+  .items {
+    list-style: none;
+    padding-left: 0;
+    width: 60%;
+    height: 60%;
+    overflow-y: scroll;
+  }
+  /* overflow-y 컨텐츠 내에서만 스크롤이 되게 하는 명령어 */
+  
+  .item {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    margin-bottom: var(--base-space);
+  }
+  
+  .item_thumbnail {
+    width: var(--size-thumbnail);
+    height: var(--size-thumbnail);
+    padding: var(--base-space);
+  }
+  
+  .item_description {
+    margin-left: var(--base-space);
+    font-size: var(--font-size);
+  }
+  
+  

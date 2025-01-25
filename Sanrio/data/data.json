@@ -1,0 +1,117 @@
+{
+    "items": [
+      {
+        "type": "animals",
+        "name": "HELLO KITTY/헬로키티",
+        "since": "1974",
+        "color": "pink",
+        "image": "../img/pochacco_a_y.png"
+      },
+      {
+        "type": "animals",
+        "name": "POCHACCO/포차코",
+        "since": "1989",
+        "color": "yellow",
+        "image": "../img/pochacco_a_y.png"
+      },
+      {
+        "type": "animals",
+        "name": "KUROMI/쿠로미",
+        "since": "2005",
+        "color": "blue",
+        "image": "../img/kuromi_a_b.png"
+      },
+      {
+        "type": "others",
+        "name": "MY MELODY/마이멜로디",
+        "since": "1975",
+        "color": "pink",
+        "image": "../img/mymelody_o_p.png"
+      },
+      {
+        "type": "animals",
+        "name": "POMPOMPURIN/폼폼푸린",
+        "since": "1996",
+        "color": "yellow",
+        "image": "../img/pompompurin_a_y.png"
+      },
+      {
+        "type": "animals",
+        "name": "CINNAMOROLL/시나모롤",
+        "since": "2001",
+        "color": "blue",
+        "image": "../img/cinnamo_a_b.png"
+      },
+      {
+        "type": "non-animals",
+        "name": "LittleTwinStars/리틀트윈스타",
+        "since": "1975",
+        "color": "pink",
+        "image": "../img/twinstars_n_p.png"
+      },
+      {
+        "type": "animals",
+        "name": "KEROKEROKEROPPI/케로케로케로피",
+        "since": "1988",
+        "color": "yellow",
+        "image": "../img/kero_a_y.png"
+      },
+      {
+        "type": "non-animals",
+        "name": "GUDETAMA/구데타마",
+        "since": "2013",
+        "color": "yellow",
+        "image": "../img/gudetama_n_y.png"
+      },
+      {
+        "type": "others",
+        "name": "BAD BADTZ-MARU/배드바츠마루",
+        "since": "1993",
+        "color": "blue",
+        "image": "../img/bad_o_b.png"
+      },
+      {
+        "type": "animals",
+        "name": "TUXEDOSAM/턱시도샘",
+        "since": "1979",
+        "color": "blue",
+        "image": "../img/tuxedo_a_b.png"
+      },
+      {
+        "type": "non-animals",
+        "name": "COGIMYUN/코기뮹",
+        "since": "2015",
+        "color": "pink",
+        "image": "../img/cogimyun_n_p.png"
+      },
+      {
+        "type": "others",
+        "name": "Marumofubiyori/딩구리데이즈",
+        "since": "2015",
+        "color": "blue",
+        "image": "../img/marumofubiyori_o_b.png"
+      },
+      {
+        "type": "others",
+        "name": "Aggretsuko/어그레츠코",
+        "since": "2015",
+        "color": "yellow",
+        "image": "../img/retsuko_n_y.png"
+      },
+      {
+        "type": "non-animals",
+        "name": "RILU RILU FAIRILU/숲의요정 페어리루",
+        "since": "2015",
+        "color": "pink",
+        "image": "../img/fairilu_n_p.png"
+      },
+      {
+        "type": "non-animals",
+        "name": "Mewkledreamy/꿈속의 뮤",
+        "since": "2017",
+        "color": "pink",
+        "image": "../img/mewkledreamy_n_p.png"
+      }
+    ]
+  }
+  
