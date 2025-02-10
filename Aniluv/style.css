@@ -68,7 +68,7 @@ button:focus {
 }
 
 .title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin: 1rem 0;
 }
 
@@ -191,7 +191,7 @@ button:focus {
 }
 
 
-/* Slide 이미지 */
+/* 메인 Slide 이미지 */
 
 .gallery {
    padding: 0;
@@ -268,6 +268,89 @@ button:focus {
 .gallery li:hover .content {
    bottom: 0;
    transition-delay: 0.5s; 
+}
+
+
+/* top10 Slide 이미지 */
+
+.top10__slider {
+    width: 100%;
+    overflow: hidden;
+    padding-top: 40px;
+    text-align: center; 
+}
+
+.slider__container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider__wrapper {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    margin: 3rem 0;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 auto;
+    width: calc((100% - 40px) / 5);
+    margin-right: 10px;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    max-height: 100%;
+}
+
+.slide:last-child {
+    margin-right: 0;
+}
+
+.slide h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 10px 0 5px;
+    color: var(--color-primary);
+}
+
+.slide p {
+    font-size: 14px;
+    color:var(--color-primary-variant);
+    max-width: 90%;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    color: var(--color-text);
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+    border-radius: 50%;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 10;
+}
+
+.slider-btn.prev {
+    left: 5px;
+}
+
+.slider-btn.next {
+    right: 5px;
 }
 
 
@@ -357,6 +440,10 @@ button:focus {
 
 /*태블릿용 화면*/
 @media screen and (min-width: 768px) and (max-width:1279px) {
+
+    .slide {
+        flex: 0 0 30%; /* 화면이 줄어들면 한 줄에 3개 */
+    }
   
    .recommend {
        flex-direction: column;
@@ -377,7 +464,12 @@ button:focus {
    }
 }
 
-/*태블릿용 화면*/
+@media (max-width: 1024px) {
+   
+}
+
+
+/*모바일일용 화면*/
 @media screen and (max-width: 768px) {
    .section {
        padding: 2rem 0;
@@ -427,6 +519,17 @@ button:focus {
     .gallery li:hover {
        flex: 60%;
    }
+   .slide {
+    flex: 0 0 45%;
+    }
+    .slider-title {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+    .slider-btn {
+        font-size: 20px;
+        padding: 10px;
+    }
 
     .recommend {
        flex-direction: column;
@@ -445,7 +548,10 @@ button:focus {
    .recommend__ani {
        font-size:1rem;
    }
-
+   .animax-top10 h2 {
+    font-size: 1.5rem;
 }
 
+
+}
 

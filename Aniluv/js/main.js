@@ -23,3 +23,39 @@ const btnClose = document.querySelector('.btn-close');
 btnClose.addEventListener('click', () => {
     modal.classList.remove('show');
 });
+
+
+//top10 Slide
+
+document.addEventListener("DOMContentLoaded", () => {
+    const slider = document.querySelector(".slider");
+    const prevBtn = document.querySelector(".slider-btn.prev");
+    const nextBtn = document.querySelector(".slider-btn.next");
+    let currentIndex = 0;
+
+    function getSlidesPerView() {
+        return window.innerWidth <= 480 ? 1 : window.innerWidth <= 768 ? 2 : 5;
+    }
+
+    function updateSlider() {
+        const slideWidth = document.querySelector(".slide").offsetWidth + 10; 
+        const totalSlides = document.querySelectorAll(".slide").length;
+        const maxIndex = totalSlides - getSlidesPerView();
+        
+
+        currentIndex = Math.max(0, Math.min(currentIndex, maxIndex));
+
+        slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+
+        prevBtn.style.display = currentIndex === 0 ? "none" : "block";
+        nextBtn.style.display = currentIndex >= maxIndex ? "none" : "block";
+    }
+
+    nextBtn.addEventListener("click", () => { currentIndex++; updateSlider(); });
+    prevBtn.addEventListener("click", () => { currentIndex--; updateSlider(); });
+    window.addEventListener("resize", updateSlider);
+
+    updateSlider(); 
+});
+
+
