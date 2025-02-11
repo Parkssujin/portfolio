@@ -271,9 +271,9 @@ button:focus {
 }
 
 
-/* top10 Slide 이미지 */
+/* top10 Slide 이미지, 신작 이미지 */
 
-.top10__slider {
+.Image__slider {
     width: 100%;
     overflow: hidden;
     padding-top: 40px;
@@ -304,6 +304,8 @@ button:focus {
     flex: 0 0 auto;
     width: calc((100% - 40px) / 5);
     margin-right: 10px;
+    overflow: hidden;
+    border-radius: 10px; 
 }
 
 .slide img {
@@ -311,6 +313,11 @@ button:focus {
     border-radius: 10px;
     object-fit: cover;
     max-height: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.slide:hover img {
+    transform: scale(1.1); 
 }
 
 .slide:last-child {

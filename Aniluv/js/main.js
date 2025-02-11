@@ -25,37 +25,46 @@ btnClose.addEventListener('click', () => {
 });
 
 
-//top10 Slide
+//Image slider
 
 document.addEventListener("DOMContentLoaded", () => {
-    const slider = document.querySelector(".slider");
-    const prevBtn = document.querySelector(".slider-btn.prev");
-    const nextBtn = document.querySelector(".slider-btn.next");
-    let currentIndex = 0;
+    document.querySelectorAll(".Image__slider").forEach((sliderSection) => {
+        const slider = sliderSection.querySelector(".slider");
+        const prevBtn = sliderSection.querySelector(".slider-btn.prev");
+        const nextBtn = sliderSection.querySelector(".slider-btn.next");
+        let currentIndex = 0;
 
-    function getSlidesPerView() {
-        return window.innerWidth <= 480 ? 1 : window.innerWidth <= 768 ? 2 : 5;
-    }
+        function getSlidesPerView() {
+            return window.innerWidth <= 480 ? 1 : window.innerWidth <= 768 ? 2 : 5;
+        }
 
-    function updateSlider() {
-        const slideWidth = document.querySelector(".slide").offsetWidth + 10; 
-        const totalSlides = document.querySelectorAll(".slide").length;
-        const maxIndex = totalSlides - getSlidesPerView();
-        
+        function updateSlider() {
+            const slideWidth = slider.querySelector(".slide").offsetWidth + 10;
+            const totalSlides = slider.querySelectorAll(".slide").length;
+            const maxIndex = totalSlides - getSlidesPerView();
 
-        currentIndex = Math.max(0, Math.min(currentIndex, maxIndex));
+            currentIndex = Math.max(0, Math.min(currentIndex, maxIndex));
 
-        slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+            slider.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
 
-        prevBtn.style.display = currentIndex === 0 ? "none" : "block";
-        nextBtn.style.display = currentIndex >= maxIndex ? "none" : "block";
-    }
+            prevBtn.style.display = currentIndex === 0 ? "none" : "block";
+            nextBtn.style.display = currentIndex >= maxIndex ? "none" : "block";
+        }
 
-    nextBtn.addEventListener("click", () => { currentIndex++; updateSlider(); });
-    prevBtn.addEventListener("click", () => { currentIndex--; updateSlider(); });
-    window.addEventListener("resize", updateSlider);
+        nextBtn.addEventListener("click", () => {
+            currentIndex++;
+            updateSlider();
+        });
 
-    updateSlider(); 
+        prevBtn.addEventListener("click", () => {
+            currentIndex--;
+            updateSlider();
+        });
+
+        window.addEventListener("resize", updateSlider);
+
+        updateSlider();
+    });
 });
 
 
