@@ -10,6 +10,16 @@ function loadItems() {
     const container = document.querySelector('.items');
     container.innerHTML = items.map(item => createHTMLString(item)).join('');
   }
+
+
+  // 다크 모드 기능
+  const darkModeSwitch = document.getElementById('darkModeSwitch');
+
+  // 다크 모드 토글
+  darkModeSwitch.addEventListener('change', () => {
+      document.body.classList.toggle('dark-mode');
+  });
+  
   
   // 주어진 데이터 항목으로 HTML 리스트 아이템 생성하기
   function createHTMLString(item) {

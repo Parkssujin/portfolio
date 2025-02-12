@@ -88,13 +88,27 @@
     overflow-y: scroll;
   }
   /* overflow-y 컨텐츠 내에서만 스크롤이 되게 하는 명령어 */
-  
-  .item {
-    background-color: white;
+
+  @keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.item {
+    background-color: var(--color-white);
     display: flex;
     align-items: center;
     margin-bottom: var(--base-space);
-  }
+    opacity: 0; 
+    animation: fadeIn 0.5s ease-in-out forwards;
+}
+
   
   .item_thumbnail {
     width: var(--size-thumbnail);
@@ -107,4 +121,58 @@
     font-size: var(--font-size);
   }
   
+
+  /* 다크 모드 */
+.dark-mode {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.dark-mode .item {
+  background-color: #444;
+  color: var(--color-white);
+}
+
+.dark-mode .typeBtn {
+  background-color: #555;
+  color: var(--color-white);
+}
+
+/* 다크 모드 토글 버튼 */
+.dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 20px;
+  background-color: var(--color-pink);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 2px;
+  cursor: pointer;
+}
+
+.dark-mode-toggle input {
+  display: none; 
+}
+
+.dark-mode-toggle .slider {
+  width: 16px;
+  height: 16px;
+  background-color: var(--color-white);
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+/* 다크 모드일 때 스위치 스타일 변경 */
+.dark-mode input:checked + .slider {
+  transform: translateX(20px);
+  background-color: var(--color-yellow);
+}
+
+/* 다크 모드일 때 토글 배경 변경 */
+.dark-mode .dark-mode-toggle {
+  background-color: #444;
+}
   
