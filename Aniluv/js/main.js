@@ -8,6 +8,13 @@ toggleBtn.addEventListener('click', () => {
     icons.classList.toggle('active');
 });
 
+document.querySelectorAll(".navbar__menu a").forEach(item => {
+    item.addEventListener("click", () => {
+        menu.classList.remove("active");
+        icons.classList.remove("active");
+    });
+});
+
 // Modal
 
 const modalNotice = document.querySelector('.modal__notice');
@@ -71,5 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
         updateSlider();
     });
 });
+
+
 
 

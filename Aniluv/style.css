@@ -110,6 +110,8 @@ button:focus {
 .navbar__menu {
     display: flex;
     padding-left: 0;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-100%);
 }
 
 .navbar__menu li {
@@ -125,6 +127,8 @@ button:focus {
     display: flex;
     color: var(--color-text);
     padding-left: 0;
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(-100%);
 }
 
 .navbar__icons li {
@@ -137,6 +141,9 @@ button:focus {
     right: 32px;
     font-size: 24px;
     color: var(--color-accent);
+}
+.navbar__menu.active, .navbar__icons.active {
+    transform: translateY(0);
 }
 
 /*  Modal */
@@ -305,6 +312,11 @@ button:focus {
 }
 
 .slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+    text-align: center; 
     flex: 0 0 auto;
     width: calc((100% - 40px) / 5);
     margin-right: 10px;
@@ -333,12 +345,17 @@ button:focus {
     font-weight: bold;
     margin: 10px 0 5px;
     color: var(--color-primary);
+    text-align: center;
+    width: 100%;
 }
 
 .slide p {
     font-size: 14px;
     color:var(--color-primary-variant);
     max-width: 90%;
+    text-align: center;
+    width: 100%;
+
 }
 
 .slider-btn {
@@ -453,7 +470,7 @@ button:focus {
 @media screen and (min-width: 768px) and (max-width:1279px) {
 
     .slide {
-        flex: 0 0 30%; /* 화면이 줄어들면 한 줄에 3개 */
+        flex: 0 0 30%; 
     }
   
    .recommend {
@@ -533,6 +550,7 @@ button:focus {
    .slide {
     flex: 0 0 45%;
     }
+
     .slider-title {
         font-size: 20px;
         margin-bottom: 15px;
@@ -564,4 +582,20 @@ button:focus {
 }
 
 
+}
+
+/* 매우 작은 모바일 화면 */
+
+@media screen and (max-width: 480px) {
+    .slide {
+        flex: 0 0 100%;
+    }
+
+    .slide img {
+        width: 100%;
+        height: auto;
+        max-height: 350px; 
+        object-fit: contain;
+    }
+    
 }
