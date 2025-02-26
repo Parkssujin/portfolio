@@ -11,17 +11,22 @@ toggleBtn.addEventListener('click', () => {
 // Modal
 
 const modalNotice = document.querySelector('.modal__notice');
-console.log(modalNotice);
 const modal = document.querySelector('.modal');
+const btnClose = document.querySelector('.btn-close');
 
 modalNotice.addEventListener('click', () => {
     modal.classList.add('show');
 });
 
-const btnClose = document.querySelector('.btn-close');
 
 btnClose.addEventListener('click', () => {
     modal.classList.remove('show');
+});
+
+modal.addEventListener('click', (event) => {
+    if (event.target === modal) { 
+        modal.classList.remove('show');
+    }
 });
 
 

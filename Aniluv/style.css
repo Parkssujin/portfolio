@@ -142,17 +142,21 @@ button:focus {
 /*  Modal */
 .modal{
    position: absolute;
+   display: flex;
    z-index: 2;
    background-color: rgba(0, 0, 0, 0.4);
    top: 0;
    left: 0;
    height: 100vh;
    width: 100%;
-   display: none;
+   opacity: 0;
+   visibility: hidden;
+   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 .modal.show{
-   display: block;
+    opacity: 1;
+    visibility: visible;
 }
 
 .modal__content {
@@ -561,4 +565,3 @@ button:focus {
 
 
 }
-
