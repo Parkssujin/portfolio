@@ -4,9 +4,9 @@ const mainSection = document.querySelector(".main");
 
 
 const images = [
-    "/Dunst/img/1-2.jpg",
-    "/Dunst/img/1-3.jpg",
-    "/Dunst/img/1-4.jpg"
+    "../img/1-2.jpg",
+    "../img/1-3.jpg",
+    "../img/1-4.jpg"
 ];
 
 let currentIndex = 0;
