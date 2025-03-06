@@ -127,7 +127,7 @@ section {
     color: var(--color-white);
     font-size: 24px;
     overflow: hidden;
-    background: url("../img/1-1.jpg") no-repeat center/cover;
+    background: url("./img/1-1.jpg") no-repeat center/cover;
     transition: background-image 1s ease-in-out;
 }
 
