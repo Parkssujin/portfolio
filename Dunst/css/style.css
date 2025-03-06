@@ -1,0 +1,331 @@
+ 
+ @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+ /* Global */
+ :root {
+
+    /* Colors */
+    --color-white: #ffffff;
+    --color-black: #222;
+    --color-red: #ff153c;
+    --color-gray: #8d8e91;
+
+ }
+
+/* 기본 스타일 */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: var(--color-black);
+    background: var(--color-white);
+    overflow-x: hidden; 
+}
+
+/* 네비게이션 전체 스타일 */
+header {
+    width: 100%;
+    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: transparent;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); 
+}
+
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 20px;
+}
+
+/* 로고 스타일 */
+.logo {
+    font-size: 32px;
+    font-weight: bold; 
+    color: black; 
+    text-transform: capitalize;
+}
+
+/* 네비게이션 메뉴 스타일 */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    text-align: center;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+
+.highlight {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* 네비게이션 아이콘 스타일 */
+.nav-icons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.nav-icons span {
+    font-size: 18px;
+    cursor: pointer;
+    color: var(--color-black);
+}
+
+.material-icons-outlined {
+    font-size: 24px;
+    color: var(--color-black);
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+.material-icons-outlined:hover {
+    color: var(--color-gray); 
+}
+
+/* 섹션 스타일 */
+section {
+    padding: 100px 20px;
+    
+}
+
+
+/* MAIN 섹션 기본 스타일 */
+.main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--color-white);
+    font-size: 24px;
+    overflow: hidden;
+    background: url("/Dunst/img/1-1.jpg") no-repeat center/cover;
+    transition: background-image 1s ease-in-out;
+}
+
+
+/* 텍스트 내용 */
+.main-content {
+    position: relative;
+    z-index: 1;
+}
+
+/* 슬라이드 애니메이션 */
+.main.fade-in::before {
+    opacity: 1;
+}
+/* NEW ARRIVALS 섹션 */
+.new {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+    padding-bottom: 50px;
+}
+
+/* 배경 동영상 컨테이너 */
+.new-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* 배경 동영상 */
+.new-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-out;
+}
+
+/* 텍스트 컨텐츠 */
+.new-content {
+    z-index: 2;
+    color: var(--color-white);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.new-content h2,
+.men-content h2,
+.acc-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.new-content p,
+.men-content p,
+.acc-content p {
+    font-size: 1.2rem;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+}
+
+.men-content p::after,
+.new-content p::after,
+.acc-content p::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: var(--color-white);
+    transform: scaleX(0); 
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* 마우스 호버 시 밑줄 나타나기 */
+.men-content p:hover::after, 
+.new-content p:hover::after,
+.acc-content p:hover::after {
+    transform: scaleX(1); 
+    transform-origin: left;
+}
+
+/* MEN, ACC 섹션 */
+.men {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    background: url("/Dunst/img/3-1.jpg") no-repeat center/cover; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--color-white);
+}
+.acc {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    background: url("/Dunst/img/3-2.jpg") no-repeat center/cover; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--color-white);
+}
+
+.men-content,
+.acc-content {
+    position: absolute;
+    z-index: 2;
+    color: var(--color-white);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+    bottom: 5rem;
+}
+
+
+
+/* COLLECTION 그리드 */
+
+.grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.collection img {
+    width: 350px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.collection img:hover {
+    transform: scale(1.05);
+}
+
+
+/* 푸터 */
+footer {
+    padding: 20px;
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+/* 페이드 인 효과 */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 스크롤 애니메이션 */
+.collection-section {
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+/* 반응형 스타일 */
+@media screen and (max-width: 768px) {
+    header {
+        justify-content: space-between;
+    }
+    
+    .nav-links {
+        display: none; /* 모바일에서는 숨김 */
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .new-content h2,
+    .men-content h2 {
+        font-size: 2rem;
+    }
+    .new-content p,
+    .men-content p {
+        margin-bottom: 50px;
+    }
+    
+}
