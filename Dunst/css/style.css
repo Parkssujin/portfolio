@@ -105,6 +105,23 @@ header {
     color: var(--color-gray); 
 }
 
+/* 네비게이션 토글 */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background: black;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+
+
 /* 섹션 스타일 */
 section {
     padding: 100px 20px;
@@ -312,11 +329,22 @@ footer {
     }
     
     .nav-links {
-        display: none; /* 모바일에서는 숨김 */
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        text-align: center;
+        flex-direction: column;
+        padding: 10px 0;
     }
-
-    .hamburger {
-        display: block;
+    .nav-links.active {
+        display: flex;
+    }
+    .nav-toggle {
+        display: flex;
     }
 
     .new-content h2,
