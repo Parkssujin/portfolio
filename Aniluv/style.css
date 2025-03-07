@@ -127,7 +127,6 @@ button:focus {
     color: var(--color-text);
     padding-left: 0;
     transition: transform 0.3s ease-in-out;
-    transform: translateY(-100%);
 }
 
 .navbar__icons li {
