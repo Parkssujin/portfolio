@@ -9,6 +9,13 @@ document.addEventListener("DOMContentLoaded", function() {
         navLinks.classList.toggle("active");
         navHamburger.classList.toggle("active");
     });
+
+    document.querySelectorAll(".nav-links a").forEach(item => {
+        item.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+            navHamburger.classList.remove("active");
+        });
+    });
 });
 //MAIN 배경 이미지 슬라이드
 const mainSection = document.querySelector(".main");

@@ -15,7 +15,7 @@ body {font-family: 'Noto Sans KR', sans-serif;color: #333; font-size: 12px;}
 #slide {position: relative;overflow: hidden;height: 100%;}
 .slideItem {height: 100%;width: 100%;position: absolute;background-position: center;background-size: cover;display: none;}
 .slideItem:first-of-type {display: block;}
- #slide>i {position: absolute;padding: 10px;color: #fff;font-size: 3em;}
+ #slide>i {position: absolute;padding: 10px;font-size: 3em;}
 .prev {left: 2%;}
 .next {right: 2%;}
 #indicator {position: absolute;left: 50%;bottom: 10%;}
@@ -218,7 +218,7 @@ body {font-family: 'Noto Sans KR', sans-serif;color: #333; font-size: 12px;}
     #login>i {padding-right: 8px;font-size: 1.5rem;}
     #login>input {margin: 10px 0;padding-top: 7px;}
     .login-button>button {margin-top: 5px; padding: 3px 5px; border: 1px solid grey;background-color: rgba( 255, 255, 255, 0 ); }
-    .setClose {float: right;padding: 8px;font-size: 1.5rem;}
+    .setClose {float: left;padding: 8px;font-size: 1.5rem;}
     
     
     
