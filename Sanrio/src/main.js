@@ -18,6 +18,8 @@ function loadItems() {
   // 다크 모드 토글
   darkModeSwitch.addEventListener('change', () => {
       document.body.classList.toggle('dark-mode');
+
+      document.body.style.transition = 'background-color 0.3s ease, color 0.3s ease';
   });
   
   
