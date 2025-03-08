@@ -1,11 +1,13 @@
 
 //nav 메뉴 모바일
+
 document.addEventListener("DOMContentLoaded", function() {
-    const toggle = document.querySelector(".nav-toggle");
+    const navHamburger = document.querySelector(".nav-hamburger");
     const navLinks = document.querySelector(".nav-links");
 
-    toggle.addEventListener("click", function() {
+    navHamburger.addEventListener("click", function() {
         navLinks.classList.toggle("active");
+        navHamburger.classList.toggle("active");
     });
 });
 //MAIN 배경 이미지 슬라이드

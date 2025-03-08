@@ -50,6 +50,36 @@ header {
     padding: 0 20px;
 }
 
+/* 네비게이션 토글 */
+.nav-hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 200;
+    position: relative;
+}
+
+.nav-hamburger span {
+    width: 25px;
+    height: 1.5px;
+    background: black;
+    margin: 5px 0;
+    transition: 0.3s;
+    transform-origin: center;
+}
+.nav-hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8.5px, 8px);
+}
+.nav-hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.nav-hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(8.5px, -8px);
+}
+
+
+
+
 /* 로고 스타일 */
 .logo {
     font-size: 32px;
@@ -104,22 +134,6 @@ header {
 .material-icons-outlined:hover {
     color: var(--color-gray); 
 }
-
-/* 네비게이션 토글 */
-.nav-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.nav-toggle span {
-    width: 25px;
-    height: 3px;
-    background: black;
-    margin: 5px 0;
-    transition: 0.3s;
-}
-
 
 
 /* 섹션 스타일 */
@@ -328,23 +342,47 @@ footer {
         justify-content: space-between;
     }
     
-    .nav-links {
-        display: none;
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 600px;
+    }
+    
+    .nav-hamburger {
+        display: flex;
         position: absolute;
-        top: 70px;
-        left: 0;
-        width: 100%;
-        background: white;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        text-align: center;
+        left: 15px;
+    }
+    .nav-icons {
+        margin-left: auto;
+    }
+    .nav-links {
+        display: flex;
         flex-direction: column;
-        padding: 10px 0;
+        position: fixed;
+        top: 0;
+        left: -100%; 
+        width: 250px;
+        height: 100vh;
+        background: rgb(255,255,255); opacity : 0.5;;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+        padding-top: 70px;
+        transition: left 0.3s ease-in-out;
+        z-index: 150;
+        margin-top: 0;
     }
     .nav-links.active {
-        display: flex;
+        left: 0;
     }
-    .nav-toggle {
-        display: flex;
+
+    .nav-links li:hover {
+        font-weight: bold;
+    }
+    .main,
+    .new {
+        max-width: 768px;
+        overflow: hidden;
     }
 
     .new-content h2,
@@ -354,6 +392,18 @@ footer {
     .new-content p,
     .men-content p {
         margin-bottom: 50px;
+    }
+    
+}
+
+/* 매우 작은 모바일 화면 */
+
+@media screen and (max-width: 480px) {
+    .nav-container {
+        max-width: 300px;
+    }
+    .nav-icons {
+        gap: 5px;
     }
     
 }
