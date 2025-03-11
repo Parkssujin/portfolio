@@ -1,0 +1,101 @@
+
+.header-women {
+    background-color: #fff;
+}
+
+.nav-links a.bold {
+    font-weight: bold;
+}
+/* 여성 컬렉션 스타일 */
+.women-content {
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.women-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 10px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* 상품 카드 스타일 */
+.product {
+    background: #fff;
+    overflow: hidden;
+    text-align: left;
+}
+
+.product-img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.product-img img {
+    width: 100%;
+    display: block;
+    transition: opacity 0.3s ease-in-out;
+}
+.product-img .hover-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.product-img:hover .hover-img {
+    opacity: 1;
+}
+
+.product-img:hover .default-img {
+    opacity: 0;
+}
+
+.product-info {
+    padding: 5px 0 0; 
+    text-align: left;
+    min-height: 150px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.product-name {
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.product-price {
+    font-size: 10px;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.product-sale-price {
+    font-size: 12px;
+    font-weight: 600;
+    color: #000;
+}
+
+.discount {
+    color: red;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+/* 반응형 설정 */
+@media (max-width: 768px) {
+    .women-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .women-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}

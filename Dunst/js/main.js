@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
 //MAIN 배경 이미지 슬라이드
 const mainSection = document.querySelector(".main");
 
-
+if (mainSection) {
 const images = [
     "./img/1-2.jpg",
     "./img/1-3.jpg",
@@ -40,6 +40,7 @@ mainSection.style.backgroundImage = `url(${images[0]})`;
 
 setInterval(changeBackground, 3000);
 
+}
 
 //동영상 애니메이션 패럴랙스 효과
 
@@ -76,17 +77,18 @@ document.addEventListener("scroll", function () {
 });
 
 // 스크롤 시 나타나는 애니메이션
-const collectionSections = document.querySelectorAll(".collection-section");
+document.addEventListener("DOMContentLoaded", function () {
+    const fadeSections = document.querySelectorAll(".fade-section");
 
-function fadeInOnScroll() {
-    collectionSections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        if (sectionTop < window.innerHeight - 50) {
-            section.style.opacity = 1;
-        }
-    });
-}
+    function fadeInOnScroll() {
+        fadeSections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            if (sectionTop < window.innerHeight - 50) {
+                section.style.opacity = 1;
+            }
+        });
+    }
 
-
-window.addEventListener("scroll", fadeInOnScroll);
-fadeInOnScroll();
+    window.addEventListener("scroll", fadeInOnScroll);
+    fadeInOnScroll(); // 페이지 로드 시 실행
+});
