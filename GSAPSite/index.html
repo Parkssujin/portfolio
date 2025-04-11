@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- SEO -->
+  <title>GSAP를 활용한 음료취향 사이트</title>
+  <meta name="autor" content="수진">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <!-- Javascript -->
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <div class="cursor"></div>
+
+  <header>
+    <h1>✨ 음료 취향 테스트 ✨</h1>
+    <p>당신에게 어울리는 음료는?</p>
+  </header>
+
+  <main>
+    <div class="quiz-box">
+      <div class="question" id="question">질문이 여기에 나옵니다</div>
+      <div class="answers" id="answers"></div>
+    </div>
+    <div id="result">
+      <h2 id="drink-result"></h2>
+      <img id="drink-image" src="" alt="추천 음료" />
+    </div>
+  </main>
+
+  <footer>
+    © 2025 Park Sujin Portfolio. Built with HTML, CSS, and GSAP.
+  </footer>
+</body>
+</html>

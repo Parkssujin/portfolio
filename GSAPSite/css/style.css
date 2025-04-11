@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    font-family: 'Nanum Gothic', sans-serif;
+    background: linear-gradient(to right, #ffe9ec, #e0f7fa);
+    color: #4b2e2e;
+    overflow-x: hidden;
+    cursor: none;
+  }
+  
+  header {
+    text-align: center;
+    padding: 2rem 1rem;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: #ff6f61;
+  }
+  
+  main {
+    max-width: 600px;
+    margin: auto;
+    padding: 2rem 1rem;
+  }
+  
+  .quiz-box {
+    background: white;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+  
+  .question {
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .answers button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background: #ffb3b3;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .answers button:hover {
+    background: #ff8080;
+  }
+  
+  #result {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  #drink-result {
+    font-size: 1.6rem;
+    color: #ff4081;
+    margin-bottom: 1rem;
+    white-space: pre-line;
+  }
+  
+  #drink-image {
+    width: 180px;
+    height: auto;
+    margin: 20px auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.6s ease;
+  }
+  
+  #drink-image.show {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  .emoji-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    pointer-events: none;
+    z-index: 10;
+  }
+  
+  .emoji {
+    position: absolute;
+    top: 0;
+    animation: floatDown 3s linear forwards;
+  }
+
+    
+  /* 커서 */
+  .cursor {
+    width: 16px;
+    height: 16px;
+    background-color: #ff6b81;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 20;
+    transition: transform 0.1s ease;
+  }
+  
+  
+  
+  footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: #999;
+    font-size: 0.9rem;
+  }
+  
+  /* 반응형 */
+
+@media (max-width: 768px) {
+    main {
+      padding: 1.5rem 1rem;
+    }
+  
+    .quiz-box {
+      padding: 1.5rem;
+    }
+  
+    .answers button {
+      font-size: 0.95rem;
+      padding: 0.8rem;
+    }
+  
+    #drink-result {
+      font-size: 1.3rem;
+    }
+  
+    #drink-image {
+      width: 140px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.6rem;
+    }
+  
+    .question {
+      font-size: 1.1rem;
+    }
+  
+    .answers button {
+      font-size: 0.9rem;
+      padding: 0.7rem;
+    }
+    
+    .cursor {
+        display: none; /* 모바일에서는 커서 숨김 */
+      }
+  
+    footer {
+      font-size: 0.75rem;
+    }
+  }
