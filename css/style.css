@@ -200,24 +200,85 @@ button:focus {
 .majors {
     display: flex;
     justify-content: space-between;
-    gap: 1rem;
-    margin: 2.5rem 0;
+    gap: 2rem;
+    margin: 2.5rem 0 4rem;
 }
 
 .major {
+    position: relative;
     background-color: var(--color-primary-variant);
-    padding: 2rem 1rem;
     color: var(--color-text);
     border-radius: 1rem;
     cursor: default;
     box-shadow: 4.0px 8.0px 8.0px rgba(0,0,0,0.38);
 }
+.major::before,
+.major::after {
+    content: ""; /* 가상 요소는 반드시 content 필요 (빈 문자열이라도) */
+    position: absolute;
+    z-index: -1;
+    transition: all 400ms ease-in-out;
+}
+.major::before {
+    inset: -1em 10%;
+    border-top: 0.2em solid var(--color-accent);
+    border-bottom: 0.2em solid var(--color-accent);
+    transform: skewY(10deg);
+}
+.major:hover::before {
+    inset: -1em 8%;
+    transform: skewY(0deg);
+}
+.major::after {
+    inset: 4em -0.5em;
+    border-left: 0.2em solid var(--color-accent);
+    border-right: 0.2em solid var(--color-accent);
+    transform: skew(10deg);
+}
+.major:hover::after {
+    inset: 3em -0.5em;
+    transform: skew(0deg);
+}
+
+.major__data {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+    padding: 2rem 2rem;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+}
 
 .major__icon {
-    font-size: 4rem;
-    margin: 1rem 0;
+    height: 80px;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    color: var(--text-color);
+    background-color: var(--color-primary);
+    transition: all 400ms ease-in-out;
+}
+ .major__icon {
     color: var(--color-accent);
-    transition: all 300ms ease;
+    box-shadow: 0 0 0 4px var(--color-primary), 0 0 0 6px var(--color-accent);
+}
+
+.major:hover .major__icon {
+    color: var(--color-primary);
+    background-color: var(--color-accent);
+    box-shadow: 0 0 0 4px var(--color-primary), 0 0 0 300px var(--color-accent);
+}
+
+.major__content p {
+    transition: all 400ms ease-in-out;
 }
 
 .major__title {
@@ -226,8 +287,8 @@ button:focus {
     margin-bottom: 1rem;
 }
 
-.major:hover .major__icon{
-    transform: rotate(-15deg) scale(1.2);
+.major:hover .major__content p {
+    color: var(--color-primary);
 }
 
 .jobs {
@@ -535,6 +596,16 @@ project__title다음에 가상의 요소가 생기게 하는 명령 */
 
     .major {
         max-width: 25rem;
+    }
+
+    .major::before {
+        inset: -0.5em 5%;
+        border-width: 0.2em;
+    }
+
+    .major::after {
+        inset: 2.5em -0.3em;
+        border-width: 0.2em;
     }
 
     .job {
