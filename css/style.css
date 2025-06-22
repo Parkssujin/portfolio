@@ -3,20 +3,23 @@
     /* App Colors */
     --color-primary: var(--color-black);
     --color-primary-variant: var(--color-gray);
-    --color-accent: var(--color-blue);
+    --color-accent: var(--color-purple);
     --color-accent-variant: var(--color-orange);
     --color-text: var(--color-white);
 
 
     /* Background */
     --home-bg-gradient:linear-gradient(180deg,rgba(13, 43, 99, 1) 0%, rgba(5, 10, 19, 1) 100%);
-    
+
     /* Colors */
     --color-white: #ffffff;
     --color-black: #050a13;
     --color-blue: #03e8f9;
     --color-orange: #fd6413;
     --color-gray: #1b1e26;
+    --color-green:#80D8C3;
+    --color-yellow:#FFD66B;
+    --color-purple:#EB5AE5;
 
     /* size */
     --size-max-width: 1200px;
