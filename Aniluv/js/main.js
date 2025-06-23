@@ -31,22 +31,24 @@ document.querySelectorAll(".navbar__menu a").forEach(item => {
 
 // Modal
 
+
 const modalNotice = document.querySelector('.modal__notice');
 const modal = document.querySelector('.modal');
 const btnClose = document.querySelector('.btn-close');
 
 modalNotice.addEventListener('click', () => {
     modal.classList.add('show');
+    document.body.style.overflow = 'hidden';
 });
-
 
 btnClose.addEventListener('click', () => {
     modal.classList.remove('show');
+    document.body.style.overflow = 'auto';
 });
 
-modal.addEventListener('click', (event) => {
-    if (event.target === modal) { 
-        modal.classList.remove('show');
-    }
+window.addEventListener('DOMContentLoaded', () => {
+    window.scrollTo(0, 0);
+    modal.classList.add('show');
+    document.body.style.overflow = 'hidden';
 });
 
