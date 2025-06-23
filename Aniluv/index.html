@@ -17,13 +17,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
     <!-- Font Awsome -->
     <script src="https://kit.fontawesome.com/d614fa714f.js" crossorigin="anonymous"></script>
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Owl Carousel JS -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <!-- Javascript -->
     <script src="js/main.js" defer></script>
 </head>
 <body>
-    <!-- Header -->
+  <!-- Header -->
     <header class="header">
         <nav class="navbar">
             <div class="navbar__logo">
@@ -47,7 +54,6 @@
             </a>
         </nav>
     </header>
-
     <!-- main -->
      <main>
         <!-- Modal -->
@@ -61,7 +67,7 @@
             </div>
         </div>
 
-        <!-- Main Slide  -->
+        <!-- Main Gallery  -->
         <section>
             <ul class="gallery">
                 <li>
@@ -106,132 +112,92 @@
                 </li>
             </ul>
         </section>
-
-        <!-- Top 10 -->
-        <section class="Image__slider">
-            <div class="slider__container">
-                <h2 class="title">애니러브 실시간 인기 TOP 10</h2>
-                <button class="slider-btn prev">&lt;</button>
-                <div class="slider__wrapper">
-                    <div class="slider">
-                        <div class="slide">
-                            <img src="./images/top10/img01.png" alt="귀멸의 칼날(한국어 더빙) 이미지">
-                            <h3>귀멸의 칼날(한국어 더빙)</h3>
-                            <p>[목] 오후 22:00 방송예정</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./images/top10/img02.png" alt="악역영애 전생 아저씨 이미지">
-                            <h3>악역영애 전생 아저씨</h3>
-                            <p>[금] 오후 13:00 방송예정</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./images/top10/img03.png" alt="샹그릴라 프론티어 이미지">
-                            <h3>샹그릴라 프론티어</h3>
-                            <p>[화] 오후 24:00 방송예정</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./images/top10/img04.png" alt="나 혼자만 레벨업(한국어 더빙) 이미지">
-                            <h3>나 혼자만 레벨업(한국어 더빙)</h3>
-                            <p>[월] 오후 24:00 방송예정</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./images/top10/img05.png" alt="불우직 감정사는 사실은 최강이었다 이미지">
-                            <h3>불우직 감정사는 사실은 최강이었다</h3>
-                            <p>[금] 오후 24:00 방송예정</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./images/top10/img06.png" alt="명탐정 코난11 이미지">
-                            <h3>명탐정 코난11</h3>
-                            <p>[월] 오후 22:30 방송예정</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./images/top10/img07.png" alt="트릴리온 게임 이미지">
-                            <h3>트릴리온 게임</h3>
-                            <p>[토] 오전 01:00 방송예정</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./images/top10/img08.png" alt="유나이트업! -UniBirth- 이미지">
-                            <h3>유나이트업! -UniBirth-</h3>
-                            <p>[일] 오전 01:00 방송예정</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./images/top10/img09.png" alt="브레드 이발소4 이미지">
-                            <h3>브레드 이발소4</h3>
-                            <p>[목] 오후 17:00 방송예정</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./images/top10/img10.png" alt="쿠로이와 메다카에게 내 귀여움이 통하지 않아 이미지">
-                            <h3>쿠로이와 메다카에게 내 귀여움이 통하지 않아</h3>
-                            <p>[화] 오전 01:00 방송예정</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="slider-btn next">&gt;</button>
+        <!-- middle slide -->
+        <section class="slide">
+        <h2 class="line-title">Aniluv TOP animation</h2>
+        <div class="owl-carousel custom-carousel owl-theme">
+            <div class="slide__img active" style="background-image: url(https://ah9szoaj9w.ecn.cdn.ofs.kr/images/tvee-admin/content/CS_20250327213303.png);">
+            <div class="slide__text">
+                <h3>mono</h3>
+                <p>4&#47;14 &#40;월&#41; 새벽 1시</p>
             </div>
-        </section>
-          <!-- New  -->
-          <section class="Image__slider">
-            <div class="slider__container">
-                <h2 class="title">애니러브 2025.02 신작</h2>
-                <button class="slider-btn prev">&lt;</button>
-                <div class="slider__wrapper">
-                    <div class="slider">
-                        <div class="slide">
-                            <img src="./images/new/img01.png" alt="너를 너무너무너무너무 좋아하는 100명의 그녀 2기 이미지">
-                            <h3>너를 너무너무너무너무 좋아하는 100명의 그녀 2기</h3>
-                            <p>2&#47;17 &#40;월&#41; 01:00 공개</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./images/new/img02.png" alt="모멘터리 릴리 이미지">
-                            <h3>모멘터리 릴리</h3>
-                            <p>2&#47;14 &#40;금&#41; 02:00 공개</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./images/new/img03.png" alt="BanG Dream! Ave Mujica 이미지">
-                            <h3>BanG Dream! Ave Mujica</h3>
-                            <p>2&#47;14 &#40;금&#41; 01:30 공개</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./images/new/img04.png" alt="샐러리맨이 이세계에 갔더니 사천왕이 된 이야기 이미지">
-                            <h3>샐러리맨이 이세계에 갔더니 사천왕이 된 이야기</h3>
-                            <p>2&#47;12 &#40;수&#41; 23:30 공개</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./images/new/img05.png" alt="꽃은 피어난다, 수라와 같이 이미지">
-                            <h3>꽃은 피어난다, 수라와 같이</h3>
-                            <p>2&#47;20 &#40;목&#41; 02:00 공개</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./images/new/img06.png" alt="A랭크 파티를 이탈한 나는, 전 제자들과 미궁 심부를 목표로 한다. 이미지">
-                            <h3>A랭크 파티를 이탈한 나는, 전 제자들과 미궁 심부를 목표로 한다.</h3>
-                            <p>2&#47;23 &#40;일&#41; 02:00 공개</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./images/new/img07.png" alt="일본에 어서 오세요 엘프 씨 이미지">
-                            <h3>일본에 어서 오세요 엘프 씨</h3>
-                            <p>2&#47;18 &#40;화&#41; 02:30 공개</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./images/new/img08.png" alt="청의 엑소시스트 종야편 이미지">
-                            <h3>청의 엑소시스트 종야편</h3>
-                            <p>2&#47;22 &#40;토&#41; 01:30 공개</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./images/new/img09.png" alt="지박소년 하나코 군 2기 이미지">
-                            <h3>지박소년 하나코 군 2기</h3>
-                            <p>2&#47;23 &#40;일&#41; 20:00 공개</p>
-                        </div>
-                        <div class="slide">
-                            <img src="./images/new/img10.jpg" alt="마법사 프리큐어!! ~MIRAI DAYS~ 이미지">
-                            <h3>마법사 프리큐어&#33;&#33; ~MIRAI DAYS~</h3>
-                            <p>2&#47;27 &#40;목&#41; 02:30 공개</p>
-                        </div>
-                    </div>
-                </div>
-                <button class="slider-btn next">&gt;</button>
             </div>
+            <div class="slide__img" style="background-image: url(https://ah9szoaj9w.ecn.cdn.ofs.kr/images/tvee-admin/content/CS_20250326185452.jpg);">
+            <div class="slide__text">
+                <h3>WITCH WATCH</h3>
+                <p>4&#47;6 &#40;일&#41; 밤 8시</p>
+            </div>
+            </div>
+            <div class="slide__img" style="background-image: url(https://ah9szoaj9w.ecn.cdn.ofs.kr/images/tvee-admin/content/CS_20250326185651.png);">
+            <div class="slide__text">
+                <h3>Summer Pockets</h3>
+                <p>4&#47;8 &#40;화&#41; 새벽 1시 30분</p>
+            </div>
+            </div>
+            <div class="slide__img" style="background-image: url(https://ah9szoaj9w.ecn.cdn.ofs.kr/images/tvee-admin/content/CS_20250327213424.png);">
+            <div class="slide__text">
+                <h3>LAZARUS 라자로</h3>
+                <p>4&#47;7 &#40;월&#41; 밤 12시</p>
+            </div>
+            </div>
+            <div class="slide__img" style="background-image: url(https://ah9szoaj9w.ecn.cdn.ofs.kr/images/tvee-admin/content/CS_20220624184517.jpg);">
+            <div class="slide__text">
+                <h3>SPY&#215;FAMILY</h3>
+                <p>4&#47;9 &#40;수&#41; 밤 7시</p>
+            </div>
+            </div>
+            <div class="slide__img" style="background-image: url(https://ah9szoaj9w.ecn.cdn.ofs.kr/images/tvee-admin/content/CS_20250326185502.png);">
+            <div class="slide__text">
+                <h3>소시민 시리즈 2기</h3>
+                <p>4&#47;9 &#40;수&#41; 새벽 1시</p>
+            </div>
+            </div>
+        </div>
+        </div>
         </section>
-    <!-- recommend -->
+        <section class="slide dark">
+        <h2 class="line-title">Aniluv NEW animation</h2>
+        <div class="owl-carousel custom-carousel owl-theme">
+            <div class="slide__img active" style="background-image: url(https://ah9szoaj9w.ecn.cdn.ofs.kr/images/tvee-admin/content/CS_20241219162748.png);">
+            <div class="slide__text">
+                <h3>꽃은 피어난다, 수라와 같이</h3>
+                <p>7&#47;7 &#40;월&#41; 방송예정</p>
+            </div>
+            </div>
+            <div class="slide__img" style="background-image: url(https://ah9szoaj9w.ecn.cdn.ofs.kr/images/tvee-admin/content/CS_20240625215519.png);">
+            <div class="slide__text">
+                <h3>도망을 잘 치는 도련님</h3>
+                <p>6&#47;30 &#40;월&#41; 방송예정</p>
+            </div>
+            </div>
+            <div class="slide__img" style="background-image: url(https://ah9szoaj9w.ecn.cdn.ofs.kr/images/tvee-admin/content/CS_20240625214943.jpg);">
+            <div class="slide__text">
+                <h3>던전 관리인</h3>
+                <p>7&#47;3 &#40;목&#41; 방송예정</p>
+            </div>
+            </div>
+            <div class="slide__img" style="background-image: url(https://ah9szoaj9w.ecn.cdn.ofs.kr/images/tvee-admin/content/CS_20240320134217.jpg);">
+            <div class="slide__text">
+                <h3>블루 록</h3>
+                <p>7&#47;23 &#40;수&#41; 방송예정</p>
+            </div>
+            </div>
+            <div class="slide__img" style="background-image: url(https://ah9szoaj9w.ecn.cdn.ofs.kr/images/tvee-admin/content/CS_20240119100019.jpg);">
+            <div class="slide__text">
+                <h3>마녀와 야수</h3>
+                <p>7&#47;25 &#40;금&#41; 방송예정</p>
+            </div>
+            </div>
+            <div class="slide__img" style="background-image: url(https://ah9szoaj9w.ecn.cdn.ofs.kr/images/tvee-admin/content/CS_20231218120328.jpg);">
+            <div class="slide__text">
+                <h3>휴일의 악당</h3>
+                <p>7&#47;22 &#40;화&#41; 방송예정</p>
+            </div>
+            </div>
+        </div>
+        </div>
+        </section>
+        <!-- recommend -->
         <section class="section">
             <h2 class="title">추천&#33; TV프로그램</h2>
             <ul class="recommends">
@@ -265,7 +231,6 @@
             </ul>
         </section>
     </main>
-
     <!-- Footer -->
     <footer id="footer" class="section">
         <div class="max-container">
@@ -310,5 +275,7 @@
             <p>Copyright© ANILUV INC. All rights reserved</p>
         </div>
     </footer>
+
+
 </body>
 </html>
